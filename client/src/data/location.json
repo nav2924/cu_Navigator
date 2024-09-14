@@ -1,31 +1,27 @@
 [
-    {
-      "position": [12.860406, 77.438516],
-      "popup": "School of Architecture"
-    },
-    {
-      "position": [12.860454, 77.439552],
-      "popup": "Devadan Hall "
-    },
-    {
-      "position": [12.863273, 77.437541],
-      "popup": "Block 1"
-    },
-    {
-      "position": [12.862426, 77.438453],
-      "popup": "Block 2"
-    },
-    {
-      "position": [12.862572, 77.439010],
-      "popup": "Block 3"
-    },
-    {
-      "position": [12.860454, 77.439552],
-      "popup": "Block 4"
-    },
-    {
-      "position": [12.860454, 77.439552],
-      "popup": "Block 5"
-    }
-  ]
-  
+  {
+    "position": [12.860406, 77.438516],
+    "popup": "School of Architecture"
+  },
+  {
+    "position": [12.860454, 77.439552],
+    "popup": "Devadan Hall "
+  },
+  {
+    "position": [12.863273, 77.437541],
+    "popup": "Block 1"
+  },
+
+  {
+    "position": [12.862443, 77.438453],
+    "popup": "Block 2 and Block 3"
+  },
+  {
+    "position": [12.862233, 77.438996],
+    "popup": "Block 4 and South Canteen"
+  },
+  {
+    "position": [12.860454, 77.439552],
+    "popup": "Block 5"
+  }
+]
