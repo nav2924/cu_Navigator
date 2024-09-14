@@ -6,7 +6,7 @@ import "leaflet-routing-machine";
 import osmProvider from "../config/osm-provider.js";
 import locations from "../data/location.json";
 import useGeoLocation from "../hooks/useGeoLocation";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const userLocationIcon = new L.Icon({
   iconUrl:
@@ -38,7 +38,6 @@ const RoutingMachine = ({ start, end }) => {
 
 const MapView = () => {
   const { state } = useLocation(); // Get state from navigation
-  const navigate = useNavigate(); // Hook to navigate
   const [center, setCenter] = useState({ lat: 12.862992, lng: 77.437 });
   const [destination, setDestination] = useState(null);
   const zoom = 17;
@@ -92,7 +91,7 @@ const MapView = () => {
   }, [location, getLocation]);
 
   return (
-    <div className="relative h-screen w-full">
+    <div className="h-screen w-full">
       <MapContainer
         center={center}
         zoom={zoom}
@@ -131,18 +130,12 @@ const MapView = () => {
             <RoutingMachine start={location.coordinates} end={destination} />
           )}
       </MapContainer>
-      <div className="absolute top-4 right-4 z-10 flex gap-2">
+      <div className="absolute top-4 right-4 z-10">
         <button
           onClick={getLocation}
           className="bg-blue-500 text-white p-2 rounded-lg shadow-lg hover:bg-blue-600 text-sm sm:text-base sm:p-3"
         >
           Get Location
-        </button>
-        <button
-          onClick={() => navigate("/")}
-          className="bg-gray-500 text-white p-2 rounded-lg shadow-lg hover:bg-gray-600 text-sm sm:text-base sm:p-3"
-        >
-          Back
         </button>
       </div>
     </div>
