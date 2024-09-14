@@ -50,21 +50,29 @@ const MapView = () => {
   }, []);
 
   useEffect(() => {
-    if (
-      location.loading &&
-      location.coordinates.lat &&
-      location.coordinates.lng
-    ) {
-      setCenter({
-        lat: location.coordinates.lat,
-        lng: location.coordinates.lng,
-      });
-      mapRef.current.flyTo(
-        [location.coordinates.lat, location.coordinates.lng],
-        zoom
-      );
-    }
-  }, [location]);
+    const updateLocation = () => {
+      if (
+        !location.loading &&
+        location.coordinates.lat &&
+        location.coordinates.lng
+      ) {
+        setCenter({
+          lat: location.coordinates.lat,
+          lng: location.coordinates.lng,
+        });
+        mapRef.current.flyTo([
+          location.coordinates.lat,
+          location.coordinates.lng,
+        ]);
+      }
+    };
+    const interval = setInterval(() => {
+      getLocation();
+      updateLocation();
+    }, 1000);
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [location, getLocation, zoom]);
 
   const handleLocationClick = (position) => {
     setDestination({
