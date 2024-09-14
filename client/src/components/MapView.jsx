@@ -85,9 +85,9 @@ const MapView = () => {
 
     const interval = setInterval(() => {
       getLocation();
-    }, 1000);
+    }, 1);
 
-    return () => clearInterval(interval); // Cleanup interval on unmount
+    return () => clearInterval(interval);
   }, [location, getLocation]);
 
   return (
@@ -97,9 +97,9 @@ const MapView = () => {
         zoom={zoom}
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
-          mapInstance.invalidateSize(); // Ensure the map resizes on mobile devices
+          mapInstance.invalidateSize(); 
         }}
-        style={{ height: "100%", width: "100%" }} // Fullscreen map for mobile
+        style={{ height: "100%", width: "100%" }} 
       >
         <TileLayer
           url={osmProvider.maptiler.url}
