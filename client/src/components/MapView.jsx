@@ -85,7 +85,7 @@ const MapView = () => {
 
     const interval = setInterval(() => {
       getLocation();
-    }, 1);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [location, getLocation]);
@@ -97,9 +97,9 @@ const MapView = () => {
         zoom={zoom}
         whenCreated={(mapInstance) => {
           mapRef.current = mapInstance;
-          mapInstance.invalidateSize(); 
+          mapInstance.invalidateSize();
         }}
-        style={{ height: "100%", width: "100%" }} 
+        style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
           url={osmProvider.maptiler.url}
