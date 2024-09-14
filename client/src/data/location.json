@@ -21,7 +21,11 @@
     "popup": "Block 4 and South Canteen"
   },
   {
-    "position": [12.860454, 77.439552],
+    "position": [12.862041, 77.438755],
     "popup": "Block 5"
+  },
+  {
+    "position": [12.862138, 77.439849],
+    "popup": "Block 6"
   }
 ]
