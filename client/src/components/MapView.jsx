@@ -67,7 +67,7 @@ const MapView = () => {
       }
     };
     const interval = setInterval(() => {
-      getLocation();
+      // getLocation();
       updateLocation();
     }, 1000);
 
