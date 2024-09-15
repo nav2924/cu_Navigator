@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { MapContainer, TileLayer, Popup, Marker, useMap } from "react-leaflet";
 import L from "leaflet";
-import "leaflet/dist/leaflet.css";
+import "leaflet/dist/images/marker-shadow.png";
 import "leaflet-routing-machine";
 import osmProvider from "../config/osm-provider.js";
 import locations from "../data/location.json";
@@ -9,10 +9,12 @@ import useGeoLocation from "../hooks/useGeoLocation";
 import { useLocation } from "react-router-dom";
 
 const userLocationIcon = new L.Icon({
-  iconUrl: "/marker.jpeg", // Local URL
+  iconUrl:
+    "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon-red.png",
   iconSize: [25, 41],
   iconAnchor: [12, 41],
   popupAnchor: [1, -34],
+  shadowSize: [41, 41],
 });
 
 const RoutingMachine = ({ start, end }) => {
@@ -35,7 +37,7 @@ const RoutingMachine = ({ start, end }) => {
 };
 
 const MapView = () => {
-  const { state } = useLocation(); // Get state from navigation
+  const { state } = useLocation();
   const [center, setCenter] = useState({ lat: 12.862992, lng: 77.437 });
   const [destination, setDestination] = useState(null);
   const zoom = 17;
@@ -49,7 +51,6 @@ const MapView = () => {
     }
   };
 
-  // Trigger flying to destination if passed from Home
   useEffect(() => {
     if (state && state.position) {
       setDestination({
