@@ -1,5 +1,3 @@
 import MapView from "./MapView";
-
-export {
-    MapView, 
-}
+import Card from "./Card";
+export { MapView, Card };

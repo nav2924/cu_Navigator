@@ -1,31 +1,42 @@
 [
   {
     "position": [12.860406, 77.438516],
-    "popup": "School of Architecture"
+    "popup": "School of Architecture",
+    "imageUrl": "/locationImages/Architecture-Block-2.jpg"
   },
   {
     "position": [12.860454, 77.439552],
-    "popup": "Devadan Hall "
+    "popup": "Devadan Hall",
+    "imageUrl": "/locationImages/Devadan-Block-1.jpg"
   },
   {
     "position": [12.863273, 77.437541],
-    "popup": "Block 1"
+    "popup": "Block 1",
+    "imageUrl": "/locationImages/Block-1-1.jpg"
   },
-
   {
     "position": [12.862443, 77.438453],
-    "popup": "Block 2 and Block 3"
+    "popup": "Block 2",
+    "imageUrl": "/locationImages/block_2-1.jpg"
+  },
+  {
+    "position": [12.862443, 77.438453],
+    "popup": " Block 3",
+    "imageUrl": "/locationImages/block_3-1.jpg"
   },
   {
     "position": [12.862233, 77.438996],
-    "popup": "Block 4 and South Canteen"
+    "popup": "Block 4 and South Canteen",
+    "imageUrl": "/locationImages/Block-4-1.jpg"
   },
   {
     "position": [12.862041, 77.438755],
-    "popup": "Block 5"
+    "popup": "Block 5",
+    "imageUrl": "/locationImages/Block-5-1.jpg"
   },
   {
     "position": [12.862138, 77.439849],
-    "popup": "Block 6"
+    "popup": "Block 6",
+    "imageUrl": "https://example.com/images/block_6.jpg"
   }
 ]
