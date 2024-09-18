@@ -38,5 +38,10 @@
     "position": [12.862138, 77.439849],
     "popup": "Block 6",
     "imageUrl": "/locationImages/Block-6 .jpg"
+  },
+  {
+    "position": [12.860584, 77.437235],
+    "popup": "PU Block",
+    "imageUrl": "/locationImages/PU-Block.jpg"
   }
 ]
